@@ -1,0 +1,22 @@
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Tipo</th>
+                <th>Data de Criação</th>
+                <th style="float: right"><button [routerLink]="['/dragon']">Adicionar Dragão</button></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dragon of dragons | orderBy:'name'">
+                <td>{{ dragon.id }}</td>
+                <td>{{ dragon.name }}</td>
+                <td>{{ dragon.type }}</td>
+                <td>{{ dragon.createdAt  | date: 'dd/MM/yyyy' }}</td>
+                <td style="float: right"><button (click)="redirectEdit(dragon.id)">Editar</button><button (click)="deleteDragonsConfirmation(dragon)" class="btn-delete">Excluir</button> </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

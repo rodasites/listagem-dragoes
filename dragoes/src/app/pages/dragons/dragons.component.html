@@ -1,0 +1,37 @@
+<div class="container ">
+  <div class="row">
+    <div class="">
+      <h2>Detalhes do Dragão</h2>
+    </div>
+    <div class="">
+      <label>Nome:</label> <input type="text" [(ngModel)]="dragon.name" name="name">
+    </div>
+    <div class="">
+      <label>Tipo:</label> <input type="text" [(ngModel)]="dragon.type" name="type">
+    </div>
+    <div class="" *ngIf="dragon.createdAt">
+      <label>Data de Criação:</label> <br>
+      <label>{{dragon.createdAt | date: 'dd/MM/yyyy'}}</label>
+    </div>
+    <div class="">
+      <div>
+        <b>Histórias:</b> <br>
+        <div *ngIf="dragon.histories.length == 0">
+          Nenhuma história cadastrada
+        </div>
+        <div *ngIf="dragon.histories.length > 0">
+          <ul *ngFor="let item of dragon.histories">
+            <li>{{item}}</li>
+          </ul>
+        </div>
+        <textarea name="" id="" cols="65" rows="10" [(ngModel)]="historie"></textarea> <br>
+        <button class="btn-adicionar" (click)="addHistorie()">Adicionar história</button>
+      </div>
+
+    </div>
+    <div class="">
+      <button class="btn-voltar" [routerLink]="['/']">Voltar</button>
+      <button class="btn-adicionar" (click)="save()">Salvar</button>
+    </div>
+  </div>
+</div>
