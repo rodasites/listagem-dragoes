@@ -18,7 +18,7 @@ export class AppComponent {
 
     router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        this.isAuthenticated = this.authenticationService.getAutenticacao();
+        this.isAuthenticated = this.authenticationService.getAutentication();
         if (!this.isAuthenticated && !/^\/login/.test(event.url)) {
           this.router.navigateByUrl('/login');
         }

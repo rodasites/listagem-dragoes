@@ -12,8 +12,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
 
   public form = {
-    usuario: '',
-    senha: ''
+    user: '',
+    password: ''
   }
 
   public loginForm: FormGroup;
@@ -27,18 +27,17 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      usuario: ['', Validators.required],
-      senha: ['', [Validators.required, Validators.minLength(8)]]
+      user: ['', Validators.required],
+      password: ['', [Validators.required, Validators.minLength(8)]]
     });
   }
   get f() { return this.loginForm.controls; }
   login() {
-    debugger
     this.submitted = true;
     if (this.loginForm.invalid) {
       return;
     }
-    if (this.authenticationService.autenticacao(this.form)) {
+    if (this.authenticationService.autentication(this.form)) {
       this.router.navigate([``]);
     } else {
       swal({

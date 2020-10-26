@@ -14,7 +14,7 @@ import swal from 'sweetalert';
 export class ListDragonsComponent implements OnInit {
 
   public dragons = []
-  order: string = 'name';
+ 
   constructor(
     private http: HttpService,
     private router: Router,

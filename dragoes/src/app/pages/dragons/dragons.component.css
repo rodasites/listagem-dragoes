@@ -1,5 +1,5 @@
 .container {
-    margin: 5px 20% 5px 20%;
+    margin: 5px 5% 5px 5%;
 }
 
 input[type=text], input[type=password] {
@@ -22,21 +22,20 @@ input[type=text], input[type=password] {
 button:hover {
     opacity: 0.8;
   }
-  .btn-voltar{
-          background-color: red;
-          color: white;
-          padding: 14px 20px;
-         
-          border: none;
-          cursor: pointer;
-          width: 50%;
-        }
-        .btn-adicionar{
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 20px;
-            
-            border: none;
-            cursor: pointer;
-            width: 50%;
-          }
+.btn-back{
+  background-color: red;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: 23%;
+  margin-right: 5px;
+}
+.btn-add{
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: 23%;
+}

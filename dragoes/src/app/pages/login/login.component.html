@@ -1,17 +1,17 @@
 <form [formGroup]="loginForm" (ngSubmit)="login()">
   <div class="container">
-    <label for="usuario"><b>Usuário</b></label>
-    <input type="text" formControlName="usuario" [ngClass]="{ 'border-error': submitted && f.usuario.errors }"
-      [(ngModel)]="form.usuario" placeholder="Digite o Usuário" name="usuario" >
-    <div *ngIf="submitted && f.usuario.errors" class="invalid">
-      <div *ngIf="f.usuario.errors.required">Usuário é obrigatório</div>
+    <label for="user"><b>Usuário</b></label>
+    <input type="text" formControlName="user" [ngClass]="{ 'border-error': submitted && f.user.errors }"
+      [(ngModel)]="form.user" placeholder="Digite o Usuário" name="user" >
+    <div *ngIf="submitted && f.user.errors" class="invalid">
+      <div *ngIf="f.user.errors.required">Usuário é obrigatório</div>
     </div>
 
-    <label for="senha"><b>Senha</b></label>
-    <input type="password" formControlName="senha" [ngClass]="{ 'border-error': submitted && f.senha.errors }"  [(ngModel)]="form.senha" placeholder="Digite a senha" name="senha" >
-      <div *ngIf="submitted && f.senha.errors" class="invalid">
-          <div *ngIf="f.senha.errors.required">Senha é obrigatória</div>
-          <div *ngIf="f.senha.errors.minlength">Senha deve ter pelo menos 8 caracteres</div>
+    <label for="password"><b>Senha</b></label>
+    <input type="password" formControlName="password" [ngClass]="{ 'border-error': submitted && f.password.errors }"  [(ngModel)]="form.password" placeholder="Digite a senha" name="password" >
+      <div *ngIf="submitted && f.password.errors" class="invalid">
+          <div *ngIf="f.password.errors.required">Senha é obrigatória</div>
+          <div *ngIf="f.password.errors.minlength">Senha deve ter pelo menos 8 caracteres</div>
       </div>
 
     <button type="submit">Entrar</button>

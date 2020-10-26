@@ -17,21 +17,23 @@
       <div>
         <b>Histórias:</b> <br>
         <div *ngIf="dragon.histories.length == 0">
-          Nenhuma história cadastrada
+          Nenhuma história cadastrada. <br>
+          Adicione uma história no campo abaixo.
         </div>
         <div *ngIf="dragon.histories.length > 0">
           <ul *ngFor="let item of dragon.histories">
             <li>{{item}}</li>
           </ul>
+          Adicione uma nova história.
         </div>
-        <textarea name="" id="" cols="65" rows="10" [(ngModel)]="historie"></textarea> <br>
-        <button class="btn-adicionar" (click)="addHistorie()">Adicionar história</button>
+        <textarea name="" id="" cols="45" rows="10" [(ngModel)]="historie"></textarea> <br>
+        <button class="btn-add" (click)="addHistorie()">Adicionar história</button>
       </div>
 
     </div>
     <div class="">
-      <button class="btn-voltar" [routerLink]="['/']">Voltar</button>
-      <button class="btn-adicionar" (click)="save()">Salvar</button>
+      <button class="btn-back" [routerLink]="['/']">Voltar</button>
+      <button class="btn-add" (click)="save()">Salvar</button>
     </div>
   </div>
 </div>

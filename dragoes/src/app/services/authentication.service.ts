@@ -7,8 +7,8 @@ export class AuthenticationService {
 
   constructor() { }
 
-  autenticacao(res) {
-    if (res.usuario == 'admin' && res.senha == '12345678') {
+  autentication(res) {
+    if (res.user == 'admin' && res.password == '12345678') {
       this.setLogin();
       return true
     } else {
@@ -24,7 +24,7 @@ export class AuthenticationService {
     sessionStorage.setItem('authentication', JSON.stringify(false));
   }
 
-  getAutenticacao() {
+  getAutentication() {
     const isAuthenticated = sessionStorage.getItem('authentication');
     return JSON.parse(isAuthenticated);
   }
